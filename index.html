@@ -2,7 +2,305 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#11784d"><meta name="description" content="A simple everyday toolkit for budgets, tasks, shopping, savings, notes and unit conversions."><link rel="manifest" href="./manifest.json"><link rel="icon" href="./icon-192.png"><title>Everyday Helper</title>
 <style>
 :root{--g:#11784d;--g2:#0b603c;--mint:#e8f7ef;--ink:#183329;--muted:#66786f;--line:#dce9e0;--bg:#f4f8f5;--white:#fff;--red:#b83232}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.top{background:linear-gradient(130deg,#0b603c,#168a58);color:white;padding:18px}.topin,main{max-width:1000px;margin:auto}.topin{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{display:flex;align-items:center;gap:12px}.logo{font-size:27px;background:#ffffff20;border-radius:14px;padding:8px}.brand h1{margin:0;font-size:25px}.brand p{margin:2px 0 0;color:#d9f4e5;font-size:13px}.top button{background:#ffffff17;color:white;border:1px solid #ffffff60;border-radius:10px;padding:8px 10px;font-weight:700;font-size:13px}main{padding:22px 15px 35px}.intro{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.intro h2{margin:0;font-size:clamp(22px,4vw,30px)}.intro p{margin:4px 0;color:var(--muted)}.status{font-size:12px;color:var(--g);background:var(--mint);border-radius:30px;padding:7px 10px;font-weight:700}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}.stat,.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:15px}.stat small{display:block;color:var(--muted)}.stat strong{font-size:22px}.nav{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:15px}.nav button{border:1px solid var(--line);border-radius:13px;background:white;padding:12px 4px;font-size:12px;font-weight:750;color:var(--ink)}.nav button span{display:block;font-size:24px}.nav button.active{background:var(--mint);border:2px solid var(--g);color:var(--g2)}.tool{display:none}.tool.active{display:block}.head{display:flex;gap:12px;align-items:center;margin-bottom:15px}.ico{font-size:25px;background:var(--mint);padding:8px;border-radius:12px}.head h3{margin:0;font-size:22px}.head p{margin:3px 0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.full{grid-column:1/-1}label{display:block;font-weight:700;font-size:13px;margin:10px 0 5px}input,select,textarea{width:100%;padding:11px 12px;border:1px solid #cfded3;border-radius:10px;background:white;color:var(--ink)}textarea{min-height:90px}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.btn{border:0;background:var(--g);color:white;padding:10px 14px;border-radius:10px;font-weight:750}.btn.light{background:var(--mint);color:var(--g2)}.btn.danger{background:#fff0f0;color:var(--red)}.btn.tiny{font-size:12px;padding:7px 10px}.result{background:#f3fbf6;border:1px solid var(--line);padding:13px;border-radius:11px;margin-top:13px;overflow-wrap:anywhere}.listhead{display:flex;justify-content:space-between;margin:22px 0 9px}.listhead h4{margin:0}.muted,.meta,.hint{color:var(--muted);font-size:12px}.items{display:grid;gap:9px}.item{border:1px solid var(--line);border-radius:12px;padding:12px;background:white;overflow-wrap:anywhere}.itemtitle{font-weight:750}.meta{margin-top:4px}.itemactions{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.checkline{display:flex;gap:8px;align-items:flex-start}.checkline input{width:18px;margin:3px 0 0}.done .itemtitle{text-decoration:line-through;color:var(--muted)}.empty{padding:16px;background:#f7faf7;border-radius:11px;text-align:center;color:var(--muted);font-size:13px}.progress{height:8px;background:#e6eee8;border-radius:20px;margin:10px 0;overflow:hidden}.progress div{height:100%;background:#168653}.foot{background:#f7faf7;color:var(--muted);font-size:12px;padding:12px;border-radius:10px;margin-top:16px}.bottom{text-align:center;color:var(--muted);font-size:12px;padding:18px}.hidden{display:none!important}@media(max-width:700px){.nav{grid-template-columns:repeat(3,1fr)}.intro{align-items:flex-start;flex-direction:column}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:18px}}@media(max-width:480px){.top{padding:14px}.topin{align-items:flex-start}.brand h1{font-size:20px}.top button{font-size:11px;padding:7px}.grid{grid-template-columns:1fr}.full{grid-column:auto}main{padding:16px 10px}.nav button{font-size:11px}}
-</style></head><body>
+</style>
+/* Everyday Helper: Professional homepage refresh */
+:root {
+  --g: #13764f;
+  --g2: #0b593b;
+  --mint: #e8f6ee;
+  --ink: #183329;
+  --muted: #66786f;
+  --line: #dce8e0;
+  --bg: #f3f7f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top left, #e4f4e9 0, transparent 40%),
+    var(--bg);
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.top {
+  padding: 22px 18px;
+  background: linear-gradient(120deg, #104b35, #13764f 65%, #229568);
+  box-shadow: 0 5px 24px #174d3420;
+}
+
+.topin,
+main {
+  max-width: 1080px;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 1px solid #ffffff35;
+  border-radius: 17px;
+  background: #ffffff18;
+}
+
+.brand h1 {
+  letter-spacing: -0.7px;
+  font-weight: 800;
+}
+
+.brand p {
+  line-height: 1.6;
+}
+
+main {
+  padding-top: 30px;
+}
+
+.intro {
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid #dcebe1;
+  border-radius: 22px;
+  background: linear-gradient(125deg, #ffffff, #f0faf3);
+  box-shadow: 0 8px 28px #18332908;
+}
+
+.intro h2 {
+  font-size: clamp(25px, 4vw, 35px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+  font-weight: 800;
+}
+
+.intro p {
+  max-width: 570px;
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+.status {
+  white-space: nowrap;
+  border: 1px solid #d3eadb;
+}
+
+.stats {
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.stat {
+  padding: 19px;
+  border-radius: 17px;
+  box-shadow: 0 4px 18px #18332906;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat small {
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.stat strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.nav button {
+  min-height: 88px;
+  border-radius: 16px;
+  padding: 13px 8px;
+  font-size: 12px;
+  box-shadow: 0 3px 12px #18332905;
+  transition: background 0.2s ease, border-color 0.2s ease,
+              transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav button span {
+  margin-bottom: 5px;
+  font-size: 27px;
+}
+
+.nav button:hover {
+  transform: translateY(-2px);
+  border-color: #9acbb0;
+  box-shadow: 0 6px 16px #18332910;
+}
+
+.nav button.active {
+  background: #e7f6ed;
+  border: 2px solid #13764f;
+  box-shadow: 0 4px 14px #13764f12;
+}
+
+.panel {
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px #18332908;
+}
+
+.head {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ico {
+  min-width: 48px;
+  min-height: 48px;
+  display: grid;
+  place-items: center;
+}
+
+.head h3 {
+  letter-spacing: -0.4px;
+}
+
+input,
+select,
+textarea {
+  border-color: #d3dfd6;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #25875d;
+  box-shadow: 0 0 0 3px #25875d20;
+}
+
+.btn {
+  padding: 11px 16px;
+  border-radius: 11px;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  filter: brightness(0.96);
+  transform: translateY(-1px);
+}
+
+.result {
+  border-radius: 13px;
+  line-height: 1.7;
+}
+
+.item {
+  border-radius: 14px;
+  padding: 15px;
+}
+
+.foot {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  line-height: 1.8;
+}
+
+.bottom {
+  line-height: 2;
+}
+
+.bottom a {
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.bottom a:hover {
+  text-decoration: underline;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #69b78b;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding-top: 20px;
+  }
+
+  .intro {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 12px;
+  }
+
+  .stat strong {
+    font-size: 20px;
+  }
+
+  .panel {
+    padding: 17px;
+    border-radius: 18px;
+  }
+
+  .nav button {
+    min-height: 78px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top {
+    padding: 15px 12px;
+  }
+
+  .logo {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+  }
+
+  .intro h2 {
+    font-size: 27px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  .status {
+    white-space: normal;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+</head><body>
 <header class="top"><div class="topin"><div class="brand"><div class="logo">🌱</div><div><h1>Everyday Helper</h1><p>Your little toolkit for a more organised day.</p></div></div><div class="actions" style="margin:0"><button id="install" hidden>＋ Install app</button><button id="backup">↓ Back up</button><button id="restore">↑ Restore</button><input id="restoreFile" type="file" accept="application/json" hidden></div></div></header>
 <main><section class="intro"><div><h2>Make today a little easier. ✨</h2><p>Plan your money, organise your day and keep your ideas close.</p></div><span class="status" id="status">● Ready to help</span></section>
 <section class="stats"><div class="stat"><small>Open tasks</small><strong id="stTasks">0</strong></div><div class="stat"><small>Shopping items left</small><strong id="stShop">0</strong></div><div class="stat"><small>Active savings goals</small><strong id="stGoals">0</strong></div></section>
